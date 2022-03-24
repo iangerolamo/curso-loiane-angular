@@ -55,7 +55,7 @@
       </div>
     </div>
   </article>
-</section> -->
+</section>
 
 <section class="event-binding">
   <article>
@@ -90,4 +90,32 @@
     </div>
   </article>
 
+</section> -->
+
+<section class="two-way-binding">
+  <article>
+    <h3>Two-way data binding</h3>
+    <div>
+      
+      <input 
+        #campoInput
+        type="text"
+        [value]="nomeDoCurso"
+        (input)="nomeDoCurso = campoInput.value"
+      /> 
+
+      <input 
+      #campoInput
+      type="text"
+      [ngModel]="nomeDoCurso"
+      (ngModelChange)="nomeDoCurso = campoInput.value"
+      /> 
+
+      <input [(ngModel)]="nomeDoCurso"> 
+
+
+      <p>Você digitou: {{ nomeDoCurso }}</p>
+
+    </div>
+  </article>
 </section>
